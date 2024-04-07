@@ -2,66 +2,101 @@
 <html>
 
 <head>
+	<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="./seoulgil.css" />
 	<title>seoulgil_webprogramming</title>
 </head>
 
 <body>
 	<div id="page">
+	<!-- --------------------------------------------------------------- -->
+		<input type="radio" name="tab" id="me" checked="checked" />
+		<input type="radio" name="tab" id="you" />
+		<input type="radio" name="tab" id="here" />
+		<input type="radio" name="tab" id="how" />
+
 		<header id="head">
 			<a href="http://gil.seoul.go.kr/walk/index.jsp" target="_blank">
 				<img class="seoulimg" src="logo.png">
 			</a>
-			<input type="radio" name="tab" id="me" checked="checked">
-			<input type="radio" name="tab" id="you">
-			<input type="radio" name="tab" id="here">
-			<input type="radio" name="tab" id="how">
 			<section class="tab-title">
 				<label for="me">나란 사람</label>
 				<label for="you">짝궁을 소개합니다</label>
-				<label for="here">이곳을 다녀오세요</label>
+				<label for="here">이곳을 소개합니다</label>
 				<label for="how">이렇게 다녀오세요</label>
 			</section>
 		</header>
 
-		<div id="container">
-			<section class="main-content">
-				<div class="inner1">
-					<aside id="snb1" class="snb">
-						<h2>나란 사람</h2>
-						<ul>
-							<li>
-								자기소개 
-							</li>
-						</ul>
-					</aside>
+		<section id="main-content">
+		<!-- ---------------------------------------------------------- -->
+			<div id="inner1">
+				<input type="radio" name="tab2" id="self" checked="checked" />
+				<aside> <!-- id="snb1" class="snb" -->
+					<details>
+						<summary>나란 사람</summary>
+						<p><label for="self">자기 소개</label></p>
+					</details>
+				</aside>
+				<div id="self-con">
+					<strong>a</strong>
 				</div>
-				<div class="inner2">
-					<aside id="snb2" class="snb">
-						<h2>짝궁을 소개합니다</h2>
-						<ul>
-							
-						</ul>
-					</aside>
+			</div>
+		<!-- ---------------------------------------------------------- -->
+			<div id="inner2">
+				<input type="radio" name="tab2" id="ques" checked="checked" />
+				<aside>
+					<details>
+						<summary>짝궁을 소개합니다</summary>
+						<p><label for="ques">20문 20답</label></p>
+					</details>
+				</aside>
+				<div id="ques-con">
+					<strong>b</strong>
 				</div>
-				<div class="inner3">
-					<aside id="snb3" class="snb">
-						<h2>이곳을 소개합니다</h2>
-						<ul>
-							
-						</ul>
-					</aside>
+			</div>
+		<!-- ---------------------------------------------------------- -->
+			<div id="inner3">
+				<input type="radio" name="tab2" id="intro" checked="checked" />
+				<input type="radio" name="tab2" id="reason" />
+				<aside>
+					<details>
+						<summary>이곳을 소개합니다</summary>
+						<p><label for="intro">둘레길 소개</label></p>
+						<p><label for="reason">선정 이유</label></p>
+					</details>
+				</aside>
+				<div id="intro-con">
+					<strong>c</strong>
 				</div>
-				<div class="inner4">
-					<aside id="snb4" class="snb">
-						<h2>이렇게 다녀오세요</h2>
-						<ul>
-							
-						</ul>
-					</aside>
+				<div id="reason-con">
+					<strong>d</strong>
 				</div>
-			</section>
-		</div>
+			</div>
+		<!-- ---------------------------------------------------------- -->
+			<div id="inner4">
+				<input type="radio" name="tab2" id="sup" />
+				<input type="radio" name="tab2" id="real" checked="checked" />
+				<input type="radio" name="tab2" id="feel" />
+				<aside>
+					<details>
+						<summary>이렇게 다녀오세요</summary>
+						<p><label for="sup">준비물</label></p>
+						<p><label for="real">실제 답사 모습</label></p>
+						<p><label for="feel">느낀 점</label></p>
+					</details>
+				</aside>
+				<div id="sup-con">
+					<strong>e</strong>
+				</div>
+				<div id="real-con">
+					<strong>f</strong>
+				</div>
+				<div id="feel-con">
+					<strong>g</strong>
+				</div>
+			</div>
+		</section>
 	</div>
 </body>
 
