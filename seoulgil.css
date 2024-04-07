@@ -9,6 +9,9 @@ a {
 li {
 	list-style: none;
 }
+label {
+	cursor: pointer;
+}
 
 #page {
 	background-color: gray;
@@ -47,7 +50,6 @@ li {
 	height: 150px;
 	line-height: 150px;
 	text-align: center;
-	cursor: pointer;
 	transition: font-size 0.5s ease-in-out;
 }
 
@@ -60,15 +62,93 @@ input:nth-of-type(2) {display: none;}
 input:nth-of-type(3) {display: none;}
 input:nth-of-type(4) {display: none;}
 
-/* ------------------------------- container ----------------------------------*/
+/* --------------------------- main-content -----------------------------*/
 
-#container {
+#main-content {
 	width: 1500px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
 
-#container {display: none;}
+#main-content>#inner1, #main-content>#inner2,
+#main-content>#inner3, #main-content>#inner4 
+{display: none;}
 
-#head:has(#me:checked) + #container .inner1 {display: block;}
-#head:has(#you:checked) + #container .inner2 {display: block;}
-#head:has(#here:checked) + #container .inner3 {display: block;}
-#head:has(#how:checked) + #container .inner4 {display: block;}
+#me:checked ~ #main-content>#inner1 {display: block;}
+#you:checked ~ #main-content>#inner2 {display: block;}
+#here:checked ~ #main-content>#inner3 {display: block;}
+#how:checked ~ #main-content>#inner4 {display: block;}
+
+#inner1, #inner2, #inner3, #inner4 {
+	position: relative;
+	width: 1500px;
+	height: 2000px;
+	background-color: aquamarine;
+}
+
+aside {
+	position: relative;
+	top: 5px;
+	left: 5px;
+}
+
+details {
+	display: inline-block;
+    padding: 0 30px;
+    width: 200px;
+    background-color: #f1f9eb;
+    border: 1px solid yellowgreen;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+summary::-webkit-details-marker {
+	display: none;
+}
+summary {
+	display: block;
+    padding: 30px 50px 30px 0;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+}
+summary::before, summary::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: #222;
+    right: 15px;
+    top: 40px;
+}
+summary::after {
+    transform: rotateZ(90deg);
+}
+details p {
+    padding-bottom: 30px;
+}
+details[open] summary::after {
+    display: none;
+}
+
+input:nth-of-type(5) {display: none;}
+input:nth-of-type(6) {display: none;}
+input:nth-of-type(7) {display: none;}
+input:nth-of-type(8) {display: none;}
+input:nth-of-type(9) {display: none;}
+input:nth-of-type(10) {display: none;}
+input:nth-of-type(11) {display: none;}
+
+#inner1>#self-con, #inner2>#ques-con,
+#inner3>#intro-con, #inner3>#reason-con,
+#inner4>#sup-con, #inner4>#real-con, #inner4>#feel-con
+{display: none;}
+
+#self:checked ~ #self-con {display: block;}
+#ques:checked ~ #ques-con {display: block;}
+#intro:checked ~ #intro-con {display: block;}
+#reason:checked ~ #reason-con {display: block;}
+#sup:checked ~ #sup-con {display: block;}
+#real:checked ~ #real-con {display: block;}
+#feel:checked ~ #feel-con {display: block;}
