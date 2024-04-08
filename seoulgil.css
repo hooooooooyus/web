@@ -66,10 +66,6 @@ input:nth-of-type(4) {display: none;}
 
 #main-content {
 	width: 1500px;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
 }
 
 #main-content>#inner1, #main-content>#inner2,
@@ -82,9 +78,8 @@ input:nth-of-type(4) {display: none;}
 #how:checked ~ #main-content>#inner4 {display: block;}
 
 #inner1, #inner2, #inner3, #inner4 {
-	position: relative;
 	width: 1500px;
-	height: 500px;
+	height: 700px;
 	background-color: aquamarine;
 }
 
@@ -96,13 +91,10 @@ input:nth-of-type(9) {display: none;}
 input:nth-of-type(10) {display: none;}
 input:nth-of-type(11) {display: none;}
 
-#inner1>#self-con, #inner2>#ques-con,
 #inner3>#intro-con, #inner3>#reason-con,
 #inner4>#sup-con, #inner4>#real-con, #inner4>#feel-con
 {display: none;}
 
-#self:checked ~ #self-con {display: block;}
-#ques:checked ~ #ques-con {display: block;}
 #intro:checked ~ #intro-con {display: block;}
 #reason:checked ~ #reason-con {display: block;}
 #sup:checked ~ #sup-con {display: block;}
@@ -110,17 +102,15 @@ input:nth-of-type(11) {display: none;}
 #feel:checked ~ #feel-con {display: block;}
 
 aside {
-	display: block;
-	position: relative;
+	position: absolute;
 	width: 300px;
-	height: 500px;
 	border-right: 1px solid black;
 }
 .news {
-	display: block;
-	position: relative;
-	width: 1200px;
-	height: 500px;
+	position: absolute;
+	margin-left: 350px;
+	margin-top: 50px;
+	width: 1150px;
 }
 
 details {
@@ -162,3 +152,16 @@ details[open] summary::after {
     display: none;
 }
 
+.myface {
+	float: left;
+	width: 200px;
+}
+#introself {
+	margin-left: 250px;
+}
+#introself>li {
+	font-family: "Nanum Pen Script", cursive;
+  	font-weight: 400;
+  	font-style: normal;
+  	font-size: 32px;
+}
