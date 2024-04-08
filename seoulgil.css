@@ -69,6 +69,7 @@ input:nth-of-type(4) {display: none;}
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+	justify-content: center;
 }
 
 #main-content>#inner1, #main-content>#inner2,
@@ -83,14 +84,43 @@ input:nth-of-type(4) {display: none;}
 #inner1, #inner2, #inner3, #inner4 {
 	position: relative;
 	width: 1500px;
-	height: 2000px;
+	height: 500px;
 	background-color: aquamarine;
 }
 
+input:nth-of-type(5) {display: none;}
+input:nth-of-type(6) {display: none;}
+input:nth-of-type(7) {display: none;}
+input:nth-of-type(8) {display: none;}
+input:nth-of-type(9) {display: none;}
+input:nth-of-type(10) {display: none;}
+input:nth-of-type(11) {display: none;}
+
+#inner1>#self-con, #inner2>#ques-con,
+#inner3>#intro-con, #inner3>#reason-con,
+#inner4>#sup-con, #inner4>#real-con, #inner4>#feel-con
+{display: none;}
+
+#self:checked ~ #self-con {display: block;}
+#ques:checked ~ #ques-con {display: block;}
+#intro:checked ~ #intro-con {display: block;}
+#reason:checked ~ #reason-con {display: block;}
+#sup:checked ~ #sup-con {display: block;}
+#real:checked ~ #real-con {display: block;}
+#feel:checked ~ #feel-con {display: block;}
+
 aside {
+	display: block;
 	position: relative;
-	top: 5px;
-	left: 5px;
+	width: 300px;
+	height: 500px;
+	border-right: 1px solid black;
+}
+.news {
+	display: block;
+	position: relative;
+	width: 1200px;
+	height: 500px;
 }
 
 details {
@@ -132,23 +162,3 @@ details[open] summary::after {
     display: none;
 }
 
-input:nth-of-type(5) {display: none;}
-input:nth-of-type(6) {display: none;}
-input:nth-of-type(7) {display: none;}
-input:nth-of-type(8) {display: none;}
-input:nth-of-type(9) {display: none;}
-input:nth-of-type(10) {display: none;}
-input:nth-of-type(11) {display: none;}
-
-#inner1>#self-con, #inner2>#ques-con,
-#inner3>#intro-con, #inner3>#reason-con,
-#inner4>#sup-con, #inner4>#real-con, #inner4>#feel-con
-{display: none;}
-
-#self:checked ~ #self-con {display: block;}
-#ques:checked ~ #ques-con {display: block;}
-#intro:checked ~ #intro-con {display: block;}
-#reason:checked ~ #reason-con {display: block;}
-#sup:checked ~ #sup-con {display: block;}
-#real:checked ~ #real-con {display: block;}
-#feel:checked ~ #feel-con {display: block;}
