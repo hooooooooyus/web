@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="./seoulgil.css" />
 	<title>seoulgil_webprogramming</title>
 </head>
@@ -12,14 +12,14 @@
 <body>
 	<div id="page">
 	<!-- --------------------------------------------------------------- -->
-		<input type="radio" name="tab" id="me" checked="checked" />
-		<input type="radio" name="tab" id="you" />
-		<input type="radio" name="tab" id="here" />
-		<input type="radio" name="tab" id="how" />
+		<input type="radio" name="tab1" id="me" checked="checked" />
+		<input type="radio" name="tab1" id="you" />
+		<input type="radio" name="tab1" id="here" />
+		<input type="radio" name="tab1" id="how" />
 
 		<header id="head">
 			<a href="http://gil.seoul.go.kr/walk/index.jsp" target="_blank">
-				<img class="seoulimg" src="logo.png" />
+				<img class="seoulimg" src="header/logo.png" />
 			</a>
 			<section class="tab-title">
 				<label for="me">나란 사람</label>
@@ -32,82 +32,188 @@
 		<section id="main-content">
 		<!-- ---------------------------------------------------------- -->
 			<div id="inner1">
-				<input type="radio" name="tab2" id="self" />
+				<input type="radio" name="tab2" id="self" checked="checked" />
 				<aside> <!-- id="snb1" class="snb" -->
-					<details>
+					<details open>
 						<summary>나란 사람</summary>
 						<p><label for="self">자기 소개</label></p>
 					</details>
 				</aside>
+				<input type="radio" name="img1" id="my1" checked="checked" />
+				<input type="radio" name="img1" id="my2" />
+				<input type="radio" name="img1" id="my3" />
 				<div class="news" id="self-con">
-					<a id="face">
-						<img class="myface" src="myface.jpg" />
-					</a>
-					<ul id="introself">
-						<li>이름 : 김현수</li><br/>
-						<li>생년월일 : 2002년 9월 13일</li><br/>
-						<li>사는 곳 : 서울 용산</li><br/>
-						<li>MBTI : ENFP</li><br/>
-						<li>즐겨하는 취미 : 보컬 배우기</li><br/>
-						<li>가장 감명깊게 본 영화 : 나는 내일 어제의 너와 만난다</li><br/>
-						<li>자주듣는 노래스타일 : 발라드</li><br/>
-						<li>좋아하는 색깔 : 초록색</li><br/>
-						<li>좋아하는 연예인 : STAYC</li><br/>
-						<li>앞으로 꼭 해보고 싶은 것 : 월드컵 직관하러 가기!!</li><br/>
-					</ul>
+					<div id="my-img">
+						<label for="my1"><img class="myface" src="inner1/myface1.jpg" /></label>
+						<label for="my2"><img class="myface" src="inner1/myface2.jpg" /></label>
+						<label for="my3"><img class="myface" src="inner1/myface3.jpg" /></label>
+					</div>
+					<div class="article" id="introself1">
+						<ul>
+							<li>내 이름 &nbsp;<span>:</span>&nbsp; 김현수</li><br/>
+							<li>생일 &nbsp;<span>:</span>&nbsp; 2002년 9월 13일</li><br/>
+							<li>사는 곳 &nbsp;<span>:</span>&nbsp; 서울 용산</li><br/>
+							<li>MBTI &nbsp;<span>:</span>&nbsp; ENFP</li><br/>
+						</ul>
+					</div>
+					<div class="article" id="introself2">
+						<ul>
+							<li>최근 관심사 &nbsp;<span>:</span>&nbsp; 보컬</li><br/>
+							<li>요즘 자주듣는 노래 &nbsp;<span>:</span>&nbsp; 천상연 - 이창섭</li><br/>
+							<li>좋아하는 가수 &nbsp;<span>:</span>&nbsp; 경서</li><br/>
+							<p> 저는 노래를 잘하지는 않지만,
+							어렸을 때부터, 보컬을 한 번 배워보고 싶어서
+							요즘 보컬학원을 다니고 있습니다! </p>
+						</ul>
+					</div>
+					<div class="article" id="introself3">
+						<ul>
+							<li>즐겨하는 취미 &nbsp;<span>:</span>&nbsp; 축구</li><br/>
+							<li>좋아하는 축구팀과 선수 &nbsp;<span>:</span>&nbsp; 맨체스터 시티, 더브라위너</li><br/>
+							<li>앞으로 꼭 해보고 싶은 것 &nbsp;<span>:</span>&nbsp; 월드컵 직관하러 가기!!</li><br/>
+						</ul>
+					</div>
 				</div>
 			</div>
 		<!-- ---------------------------------------------------------- -->
 			<div id="inner2">
-				<input type="radio" name="tab2" id="ques" />
+				<input type="radio" name="tab3" id="ques" checked="checked" />
 				<aside>
-					<details>
+					<details open>
 						<summary>짝궁을 소개합니다</summary>
 						<p><label for="ques">20문 20답</label></p>
 					</details>
 				</aside>
+				<input type="radio" name="img2" id="your1" checked="checked" />
+				<input type="radio" name="img2" id="your2" />
 				<div class="news" id="ques-con">
-					<strong>b</strong>
+					<div id="your-img">
+						<label for="your1"><img class="yourface" src="inner2/yourface1.jpg" /></label>
+						<img class="yourface" height="400" src="inner2/yourface3.jpg" />
+						<label for="your2"><img class="yourface" src="inner2/yourface2.jpg" /></label>
+					</div>
+					<div class="talkbox" id="yourself1">
+						<div class="ask"><div class="pull1">이름, 나이, 사는 곳이<br/> 어떻게 되시나요?</div></div>
+						<div class="ans"><div class="pull2">제 이름은 고경모 입니다.<br/> 22살에 현재는 일산에 살고 있습니다.</div></div>
+						<div class="ask"><div class="pull1">MBTI가 어떻게 되세요?</div></div>
+						<div class="ans"><div class="pull2">제 MBTI는 ISTP입니다!</div></div>
+						<div class="ask"><div class="pull1">가장 기억에 남는 여행지가 있으신가요?</div></div>
+						<div class="ans"><div class="pull2">예전에 일본 오사카로 여행 갔던게 기억에 남아요.</div></div>
+						<div class="ask"><div class="pull1">가보고 싶은 여행지가<br/> 있다면 어디인가요?</div></div>
+						<div class="ans"><div class="pull2">일본을 또 가고 싶어요. <br/>이번에는 삿포로, 아니면 <br/>마쓰야마에 가보고 싶어요!</div></div>
+						<div class="ask"><div class="pull1">어떤 날씨를 가장 좋아하세요?</div></div>
+						<div class="ans"><div class="pull2">겨울이요. 벌레가 없어서 <br/>겨울을 제일 좋아해요!</div></div>
+						<div class="ask"><div class="pull1">제일 감명깊게 본 영화가<br/> 무엇인가요?</div></div>
+						<div class="ans"><div class="pull2">'라스트 홀리데이' 라는 <br/>영화가 가장 기억에 남아요.</div></div>
+						<div class="ask"><div class="pull1">최근에 본 드라마가 있다면<br/> 소개해주세요.</div></div>
+						<div class="ans"><div class="pull2">넷플릭스에 올라온 웹툰 <br/>원작의 '살인자ㅇ난감' 을 최근에 재밌게 봤어요.</div></div>
+						<div class="ask"><div class="pull1">최근에 즐겨하는 취미가<br/> 있으신가요?</div></div>
+						<div class="ans"><div class="pull2">그냥 요즘에는 누워있는거 밖에 안하는 것 같아요...</div></div>
+						<div class="ask"><div class="pull1">가장 좋아하는 음식은<br/> 무엇인가요?</div></div>
+						<div class="ans"><div class="pull2">맵거나 달달한 음식이요. <br/>마라탕이나 떡볶이를 좋아하고, 젤리도 자주 먹어요!</div></div>
+						<div class="ask"><div class="pull1">좋아하는 동물이 있다면<br/> 알려주세요.</div></div>
+						<div class="ans"><div class="pull2">저는 고양이를 좋아해요. <br/>귀엽잖아요!</div></div>
+					</div>
+					<div class="talkbox" id="yourself2">
+						<div class="ask"><div class="pull1">즐겨 입는 패션스타일이 <br/>어떻게 되시나요?</div></div>
+						<div class="ans"><div class="pull2">저는 깔끔한 스타일의 룩을 즐겨입어요.</div></div>
+						<div class="ask"><div class="pull1">좋아하는 운동이 혹시 <br/>있으신가요?</div></div>
+						<div class="ans"><div class="pull2">제가 운동을 그닥 선호하지 않아요...</div></div>
+						<div class="ask"><div class="pull1">즐겨듣는 장르가 있을까요?</div></div>
+						<div class="ans"><div class="pull2">노래 비트가 제 마음에 드는 K-POP을 즐겨들어요.</div></div>
+						<div class="ask"><div class="pull1">좋아하는 색깔이 무엇인지 궁금해요.</div></div>
+						<div class="ans"><div class="pull2">연한 파랑색을 가장 좋아해요.</div></div>
+						<div class="ask"><div class="pull1">가장 좋아하는 연예인은 <br/>누구인가요?</div></div>
+						<div class="ans"><div class="pull2">걸그룹 중에 에스파를 제일 좋아합니다!</div></div>
+						<div class="ask"><div class="pull1">남들은 모르지만 본인이 <br/>잘하는 것이 있나요?</div></div>
+						<div class="ans"><div class="pull2">저는 남들보다 조금 똘끼가 있는 것 같아요...</div></div>
+						<div class="ask"><div class="pull1">약속이 없는 주말에 보통 <br/>무엇을 하시나요?</div></div>
+						<div class="ans"><div class="pull2">이때도 그냥 침대에만 누워있어요...</div></div>
+						<div class="ask"><div class="pull1">주량이 얼마나 되세요?</div></div>
+						<div class="ans"><div class="pull2">반병 마시면 취하는 것 같고, 1병 마시면 진짜 취해요.</div></div>
+						<div class="ask"><div class="pull1">살면서 공포증 같은걸 느껴보신 적이 있나요?</div></div>
+						<div class="ans"><div class="pull2">딱히 없는데, 어두운 곳은 기피합니다.</div></div>
+						<div class="ask"><div class="pull1">앞으로 내가 이것만큼은 꼭 해봐야겠다는게 있을까요?</div></div>
+						<div class="ans"><div class="pull2">나중에 꼭 10억을 벌어보고 싶어요!!</div></div>
+					</div>
 				</div>
 			</div>
 		<!-- ---------------------------------------------------------- -->
 			<div id="inner3">
-				<input type="radio" name="tab2" id="intro" checked="checked" />
-				<input type="radio" name="tab2" id="reason" />
+				<input type="radio" name="tab4" id="intro" checked="checked" />
+				<input type="radio" name="tab4" id="reason" />
 				<aside>
-					<details>
+					<details open>
 						<summary>이곳을 소개합니다</summary>
 						<p><label for="intro">둘레길 소개</label></p>
 						<p><label for="reason">선정 이유</label></p>
 					</details>
 				</aside>
+				<input type="radio" name="img3" id="road1" checked="checked" />
+				<input type="radio" name="img3" id="road2" />
+				<input type="radio" name="img4" id="pick1" checked="checked" />
+				<input type="radio" name="img4" id="pick2" />
 				<div class="news" id="intro-con">
-					<strong>c</strong>
+					<div id="road-img">
+						<label for="road1"><img class="road" src="inner3/road1.jpg" /></label>
+						<label for="road2"><img class="road" src="inner3/road2.jpg" /></label>
+					</div>
+					<div class="article" id="way1">
+						<ul>
+							<li>내 이름 &nbsp;<span>:</span>&nbsp; 김현수</li><br/>
+							<li>생일 &nbsp;<span>:</span>&nbsp; 2002년 9월 13일</li><br/>
+							<li>사는 곳 &nbsp;<span>:</span>&nbsp; 서울 용산</li><br/>
+							<li>MBTI &nbsp;<span>:</span>&nbsp; ENFP</li><br/>
+						</ul>
+					</div>
+					<div class="article" id="way2">
+						<ul>
+							<li>최근 관심사 &nbsp;<span>:</span>&nbsp; 보컬</li><br/>
+							<li>요즘 자주듣는 노래 &nbsp;<span>:</span>&nbsp; 천상연 - 이창섭</li><br/>
+							<li>좋아하는 가수 &nbsp;<span>:</span>&nbsp; 경서</li><br/>
+							<p> 저는 노래를 잘하지는 않지만,
+							어렸을 때부터, 보컬을 한 번 배워보고 싶어서
+							요즘 보컬학원을 다니고 있습니다! </p>
+						</ul>
+					</div>
 				</div>
 				<div class="news" id="reason-con">
-					<strong>d</strong>
+					<div id="pick-img">
+						<label for="pick1"><img class="pick" src="inner3/pick1.jpg" /></label>
+						<label for="pick2"><img class="pick" src="inner3/pick2.jpg" /></label>
+					</div>
+					<div class="article" id="pick-1">
+						<h3>저는 용산에 살고 있고, 제 짝궁은 일산에 살고 있어서</h3><br/>
+						<h3>그 중간에 있는 은평구!</h3><br/>
+						<h3>그 근처에 있는 서울 산책로를 걸어보기로 했습니다!</h3>
+					</div>
+					<div class="article" id="pick-2">
+						<h3>은평구 주위에 7코스와 8코스가 있었는데,</h3><br/>
+						<h3>'상' 코스가 없는 8코스 중에서</h3><br/>
+						<h3>17,18코스를 걸어보기로 하였습니다!</h3>
+					</div>
 				</div>
 			</div>
 		<!-- ---------------------------------------------------------- -->
 			<div id="inner4">
-				<input type="radio" name="tab2" id="sup" />
-				<input type="radio" name="tab2" id="real" checked="checked" />
-				<input type="radio" name="tab2" id="feel" />
+				<input type="radio" name="tab5" id="sup" />
+				<input type="radio" name="tab5" id="real" checked="checked" />
+				<input type="radio" name="tab5" id="feel" />
 				<aside>
-					<details>
+					<details open>
 						<summary>이렇게 다녀오세요</summary>
 						<p><label for="sup">준비물</label></p>
 						<p><label for="real">실제 답사 모습</label></p>
 						<p><label for="feel">느낀 점</label></p>
 					</details>
 				</aside>
-				<div class="news" id="sup-con">
+				<div id="sup-con">
 					<strong>e</strong>
 				</div>
-				<div class="news" id="real-con">
+				<div id="real-con">
 					<strong>f</strong>
 				</div>
-				<div class="news" id="feel-con">
+				<div id="feel-con">
 					<strong>g</strong>
 				</div>
 			</div>
