@@ -14,103 +14,11 @@ label {
 }
 
 #page {
-	background-color: gray;
 	padding-top: 10px;
 	width: 1500px;
-	height: 5000px;
+	height: 2000px;
 	margin: 10px auto;
-}
-
-/* ------------------------------- header ----------------------------------*/
-
-#head {
-	width: 1500px;
-	height: 150px;
-	display: flex;
-  	flex-direction: row;
-  	background-image: linear-gradient(to right, yellowgreen, skyblue);
-}
-
- #head > a {height: 0;}
-
-.seoulimg {
-	display: block;
-	max-height: 150px;
-}
-
-.tab-title {
-	display: block;
-	height: 150px;
-}
-
-.tab-title > label {
-	float: left;
-	margin-left: 50px;
-	width: 230px;
-	height: 150px;
-	line-height: 150px;
-	text-align: center;
-	transition: font-size 0.5s ease-in-out;
-}
-
-.tab-title > label:hover {
-	font-size : 24px;
-}
-
-input:nth-of-type(1) {display: none;}
-input:nth-of-type(2) {display: none;}
-input:nth-of-type(3) {display: none;}
-input:nth-of-type(4) {display: none;}
-
-/* --------------------------- main-content -----------------------------*/
-
-#main-content {
-	width: 1500px;
-}
-
-#main-content>#inner1, #main-content>#inner2,
-#main-content>#inner3, #main-content>#inner4 
-{display: none;}
-
-#me:checked ~ #main-content>#inner1 {display: block;}
-#you:checked ~ #main-content>#inner2 {display: block;}
-#here:checked ~ #main-content>#inner3 {display: block;}
-#how:checked ~ #main-content>#inner4 {display: block;}
-
-#inner1, #inner2, #inner3, #inner4 {
-	width: 1500px;
-	height: 700px;
-	background-color: aquamarine;
-}
-
-input:nth-of-type(5) {display: none;}
-input:nth-of-type(6) {display: none;}
-input:nth-of-type(7) {display: none;}
-input:nth-of-type(8) {display: none;}
-input:nth-of-type(9) {display: none;}
-input:nth-of-type(10) {display: none;}
-input:nth-of-type(11) {display: none;}
-
-#inner3>#intro-con, #inner3>#reason-con,
-#inner4>#sup-con, #inner4>#real-con, #inner4>#feel-con
-{display: none;}
-
-#intro:checked ~ #intro-con {display: block;}
-#reason:checked ~ #reason-con {display: block;}
-#sup:checked ~ #sup-con {display: block;}
-#real:checked ~ #real-con {display: block;}
-#feel:checked ~ #feel-con {display: block;}
-
-aside {
-	position: absolute;
-	width: 300px;
-	border-right: 1px solid black;
-}
-.news {
-	position: absolute;
-	margin-left: 350px;
-	margin-top: 50px;
-	width: 1150px;
+	background: #ededed url('header/bg_warp.gif') repeat-x 0 top;
 }
 
 details {
@@ -119,7 +27,7 @@ details {
     width: 200px;
     background-color: #f1f9eb;
     border: 1px solid yellowgreen;
-    border-radius: 10px;
+    border-radius: 15px;
     margin-top: 20px;
     margin-left: 10px;
 }
@@ -152,16 +60,264 @@ details[open] summary::after {
     display: none;
 }
 
-.myface {
+/* ------------------------------- header ----------------------------------*/
+
+#head {
+	width: 1500px;
+	height: 150px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+  	/* background-image: linear-gradient(to right, yellowgreen, skyblue); */
+}
+
+ #head>a {height: 0;}
+
+.seoulimg {
+	display: block;
+	max-height: 100px;
+	margin-left: 50px;
+	margin-top: 25px;
+}
+
+.tab-title {
+	display: block;
+	height: 150px;
+}
+.tab-title>label {
 	float: left;
-	width: 200px;
+	width: 270px;
+	height: 150px;
+	margin-right: 50px;
+	line-height: 150px;
+	text-align: center;
+	color: white;
+	font-weight: 600;
+	font-size: 24px;
+	transition: font-size 0.5s ease-in-out;
 }
-#introself {
-	margin-left: 250px;
+.tab-title>label:hover {
+	font-size : 32px;
+	text-decoration : underline;
+ 	text-underline-offset : 7px;
 }
-#introself>li {
+
+input:nth-of-type(1) {display: none;}
+input:nth-of-type(2) {display: none;}
+input:nth-of-type(3) {display: none;}
+input:nth-of-type(4) {display: none;}
+
+/* --------------------------- main-content -----------------------------*/
+
+#main-content {
+	width: 1500px;
+	margin-top: 30px;
+}
+
+#main-content>#inner1, #main-content>#inner2,
+#main-content>#inner3, #main-content>#inner4 
+{display: none;}
+
+#me:checked ~ #main-content>#inner1 {display: block;}
+#you:checked ~ #main-content>#inner2 {display: block;}
+#here:checked ~ #main-content>#inner3 {display: block;}
+#how:checked ~ #main-content>#inner4 {display: block;}
+
+#inner1, #inner2, #inner3, #inner4 {
+	width: 1500px;
+	background-color: white;
+}
+
+input:nth-of-type(5) {display: none;}
+input:nth-of-type(6) {display: none;}
+input:nth-of-type(7) {display: none;}
+input:nth-of-type(8) {display: none;}
+input:nth-of-type(9) {display: none;}
+input:nth-of-type(10) {display: none;}
+input:nth-of-type(11) {display: none;}
+/* 내 소개 이미지 때문에 3개 추가 */
+input:nth-of-type(12) {display: none;} 
+input:nth-of-type(13) {display: none;}
+input:nth-of-type(14) {display: none;} 
+/* 짝궁 소개 이미지 때문에 2개 추가 */
+input:nth-of-type(15) {display: none;} 
+input:nth-of-type(16) {display: none;} 
+/* 이곳 소개 이미지 때문에 4개 추가 */
+input:nth-of-type(17) {display: none;} 
+input:nth-of-type(18) {display: none;} 
+input:nth-of-type(19) {display: none;} 
+input:nth-of-type(20) {display: none;} 
+
+#inner1>#self-con, #inner2>#ques-con,
+#inner3>#intro-con, #inner3>#reason-con,
+#inner4>#sup-con, #inner4>#real-con, #inner4>#feel-con
+{display: none;}
+
+#self:checked ~ #self-con {display: block;}
+#ques:checked ~ #ques-con {display: block;}
+#intro:checked ~ #intro-con {display: block;}
+#reason:checked ~ #reason-con {display: block;}
+#sup:checked ~ #sup-con {display: block;}
+#real:checked ~ #real-con {display: block;}
+#feel:checked ~ #feel-con {display: block;}
+
+aside {
+	position: absolute;
+	width: 250px;
+}
+.news {
+	float: right;
+	margin-top: 20px;
+	width: 1250px;
+}
+
+/* --------------------------- inner1 -----------------------------*/
+
+#my-img {
+	display: flex;
+  	flex-direction: row;
+  	justify-content: space-around;
+	height: 450px;
+}
+.myface {
+	width: 300px;
+}	
+
+.article {
+	margin-left: 55px;
+	font-size: 30px;
+}
+.article li, .article p {
 	font-family: "Nanum Pen Script", cursive;
   	font-weight: 400;
   	font-style: normal;
-  	font-size: 32px;
+}
+.article p {font-size: 35px;}
+.article span {
+	color: red;
+	font-size: 40px;
+}
+
+#introself1, #introself2, #introself3 {display: none;}
+
+#my1:checked ~ #self-con>#introself1 {display: block;}
+#my2:checked ~ #self-con>#introself2 {display: block;}
+#my3:checked ~ #self-con>#introself3 {display: block;}
+
+/* --------------------------- inner2 -----------------------------*/
+
+#your-img {
+	display: flex;
+  	flex-direction: row;
+  	justify-content: space-around;
+	height: 450px;
+}
+.yourface {
+	width: 300px;
+}
+
+#yourself1, #yourself2 {display: none;}
+
+#your1:checked ~ #ques-con>#yourself1 {display: block;}
+#your2:checked ~ #ques-con>#yourself2 {display: block;}
+
+#yourface3 {
+	display: block;
+}
+
+.talkbox {
+	width: 750px;
+	height: 1000px;
+	margin: auto;
+	border: 5px solid black;
+	overflow: scroll;
+	background-color: #E1F5FE;
+}
+.ask {
+	padding: 20px;
+	height: 100px;
+}
+.ans {
+	padding: 20px;
+	height: 100px;
+}
+.ask>.pull1 {
+	float: right;
+	position:relative; 
+	margin: 30px; 
+	padding: 10px; 
+	width:200px; 
+	height:60px; 
+	color: black; 
+	border-radius: 10px; 
+	background-color: #FFEE58;
+	line-height: 30px;
+	font-weight: 600;
+}
+.ask>.pull1:after {
+	content:""; 
+	position: absolute; 
+	top: 21px; 
+	right: -30px; 
+	border-left: 30px solid #FFEE58; 
+	border-top: 10px solid transparent; 
+	border-bottom: 10px solid transparent;
+}
+.ans>.pull2 {
+	position:relative; 
+	margin: 30px; 
+	padding: 10px; 
+	width:200px; 
+	height:90px; 
+	color: black; 
+	border-radius: 10px; 
+	background-color: #FFFFFF;
+	line-height: 30px;
+	font-weight: 600;
+}
+.ans>.pull2:after {
+	content:""; 
+	position: absolute; 
+	top: 21px; 
+	left: -30px; 
+	border-right: 30px solid #FFFFFF; 
+	border-top: 10px solid transparent; 
+	border-bottom: 10px solid transparent;
+}
+
+/* --------------------------- inner3 -----------------------------*/
+
+#road-img {
+	display: flex;
+  	flex-direction: row;
+  	justify-content: space-around;
+	height: 450px;
+}
+.road {
+	width: 300px;
+}
+#pick-img {
+	display: flex;
+  	flex-direction: row;
+  	justify-content: space-around;
+	height: 450px;
+}
+.pick {
+	width: 300px;
+}
+
+#way1, #way2, #pick-1, #pick-2 {display: none; margin-left: 150px;}
+
+#road1:checked ~ #intro-con>#way1 {display: block;}
+#road2:checked ~ #intro-con>#way2 {display: block;}
+#pick1:checked ~ #reason-con>#pick-1 {display: block;}
+#pick2:checked ~ #reason-con>#pick-2 {display: block;}
+
+#pick-1>h3, #pick-2>h3 {
+	font-family: "Nanum Pen Script", cursive;
+  	font-weight: 400;
+  	font-style: normal;
+  	font-size: 35px;
+  	text-align: center;
+  	margin-right: 150px;
 }
