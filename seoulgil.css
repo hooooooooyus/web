@@ -88,6 +88,7 @@ input:nth-of-type(4) {display: none;}
 
 #inner1, #inner2, #inner3, #inner4 {
 	width: 1500px;
+	padding-top: 100px;
 }
 
 details {
@@ -180,7 +181,8 @@ aside {
 .news {
 	float: right;
 	margin-top: 20px;
-	width: 1250px;
+	margin-right: 100px;
+	width: 1000px;
 }
 .article {
 	margin-left: 55px;
@@ -214,6 +216,14 @@ aside {
 #my1:checked ~ #self-con>#introself1 {display: block;}
 #my2:checked ~ #self-con>#introself2 {display: block;}
 #my3:checked ~ #self-con>#introself3 {display: block;}
+
+#inner1 aside label {
+	transition: opacity 0.5s ease;
+	opacity: 1;
+}
+#inner1 #self:checked ~ aside label[for="self"] {
+	text-decoration: underline;
+}
 
 /* --------------------------- inner2 -----------------------------*/
 
@@ -264,11 +274,11 @@ aside {
 	line-height: 30px;
 	font-weight: 600;
 }
-.ask>.pull1:after {
+.ask>.pull1::after {
 	content:""; 
 	position: absolute; 
-	top: 21px; 
-	right: -30px; 
+	top: 20px; 
+	left: 220px; 
 	border-left: 30px solid #FFEE58; 
 	border-top: 10px solid transparent; 
 	border-bottom: 10px solid transparent;
@@ -285,14 +295,22 @@ aside {
 	line-height: 30px;
 	font-weight: 600;
 }
-.ans>.pull2:after {
+.ans>.pull2::after {
 	content:""; 
 	position: absolute; 
-	top: 21px; 
-	left: -30px; 
+	top: 20px; 
+	right: 220px; 
 	border-right: 30px solid #FFFFFF; 
 	border-top: 10px solid transparent; 
 	border-bottom: 10px solid transparent;
+}
+
+#inner2 aside label {
+	transition: opacity 0.5s ease;
+	opacity: 1;
+}
+#inner2 #ques:checked ~ aside label[for="ques"] {
+	text-decoration: underline;
 }
 
 /* --------------------------- inner3 -----------------------------*/
@@ -328,8 +346,26 @@ aside {
   	font-weight: 400;
   	font-style: normal;
   	font-size: 35px;
-  	text-align: center;
   	margin-right: 150px;
+  	text-align: center;
+}
+
+#inner3 aside label {
+	transition: opacity 0.5s ease;
+	opacity: 1;
+}
+#inner3 #intro:checked ~ aside label[for="intro"] {
+	text-decoration: underline;
+}
+#inner3 #intro:checked ~ aside label[for="reason"] {
+	opacity: 0.5;
+}
+
+#inner3 #reason:checked ~ aside label[for="reason"] {
+	text-decoration: underline;
+}
+#inner3 #reason:checked ~ aside label[for="intro"] {
+	opacity: 0.5;
 }
 
 /* --------------------------- inner4 -----------------------------*/
@@ -358,6 +394,9 @@ aside {
 }
 #real-con>strong {
 	font-size: 24px;
+	font-family: "Gaegu", sans-serif;
+  	font-weight: 400;
+  	font-style: normal;
 }
 .trip {
 	width: 300px;
@@ -387,6 +426,31 @@ aside {
 .friend {
 	width: 400px;
 }
-.view {
+#view {
 	width: 800px;
+}
+
+#inner4 aside label {
+	transition: opacity 0.5s ease;
+	opacity: 1;
+}
+#inner4 #sup:checked ~ aside label[for="sup"] {
+	text-decoration: underline;
+}
+#inner4 #sup:checked ~ aside label[for="real"], #inner4 #sup:checked ~ aside label[for="feel"] {
+	opacity: 0.5;
+}
+
+#inner4 #real:checked ~ aside label[for="real"] {
+	text-decoration: underline;
+}
+#inner4 #real:checked ~ aside label[for="sup"], #inner4 #real:checked ~ aside label[for="feel"] {
+	opacity: 0.5;
+}
+
+#inner4 #feel:checked ~ aside label[for="feel"] {
+	text-decoration: underline;
+}
+#inner4 #feel:checked ~ aside label[for="sup"], #inner4 #feel:checked ~ aside label[for="real"] {
+	opacity: 0.5;
 }
