@@ -20,55 +20,6 @@ label {
 	background-color: #F2FFEE;
 }
 
-details {
-	display: inline-block;
-    padding: 0 30px;
-    width: 200px;
-    background-color: #f1f9eb;
-    border: 1px solid yellowgreen;
-    border-radius: 15px;
-    margin-top: 20px;
-    margin-left: 10px;
-}
-summary::-webkit-details-marker {
-	display: none;
-}
-summary {
-	display: block;
-    padding: 30px 50px 30px 0;
-    font-weight: 600;
-    cursor: pointer;
-    position: relative;
-}
-summary::before, summary::after {
-    content: "";
-    position: absolute;
-    width: 15px;
-    height: 2px;
-    background-color: #222;
-    right: 15px;
-    top: 40px;
-}
-summary::after {
-    transform: rotateZ(90deg);
-}
-details>p {
-    padding-bottom: 30px;
-    /* opacity: 0.5; */
-}
-details[open] summary::after {
-    display: none;
-}
-/*
-#self:checked ~ aside p {opacity: 1; text-decoration: underline; text-underline-offset: 3px;}
-#ques:checked ~ aside p {opacity: 1; text-decoration: underline; text-underline-offset: 3px;}
-#intro:checked ~ aside p {opacity: 1; text-decoration: underline; text-underline-offset: 3px;}
-#reason:checked ~ aside p {opacity: 1; text-decoration: underline; text-underline-offset: 3px;}
-#sup:checked ~ aside p {opacity: 1; text-decoration: underline; text-underline-offset: 3px;}
-#real:checked ~ aside p {opacity: 1; text-decoration: underline; text-underline-offset: 3px;}
-#feel:checked ~ aside p {opacity: 1; text-decoration: underline; text-underline-offset: 3px;}
-*/
-
 /* ------------------------------- header ----------------------------------*/
 
 #head {
@@ -138,6 +89,56 @@ input:nth-of-type(4) {display: none;}
 #inner1, #inner2, #inner3, #inner4 {
 	width: 1500px;
 }
+
+details {
+	display: inline-block;
+    padding: 0 30px;
+    width: 200px;
+    background-color: #f1f9eb;
+    border: 1px solid yellowgreen;
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+summary::-webkit-details-marker {
+	display: none;
+}
+summary {
+	display: block;
+    padding: 30px 50px 30px 0;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+}
+summary::before, summary::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: #222;
+    right: 15px;
+    top: 40px;
+}
+summary::after {
+    transform: rotateZ(90deg);
+}
+details>p {
+    padding-bottom: 30px;
+    /* opacity: 0.5; */
+}
+details[open] summary::after {
+    display: none;
+}
+
+/*
+#self:checked ~ aside p {opacity: 1; text-decoration: underline; text-underline-offset: 3px;}
+#ques:checked ~ aside p {opacity: 1; text-decoration: underline; text-underline-offset: 3px;}
+#intro:checked ~ aside p {opacity: 1; text-decoration: underline; text-underline-offset: 3px;}
+#reason:checked ~ aside p {opacity: 1; text-decoration: underline; text-underline-offset: 3px;}
+#sup:checked ~ aside p {opacity: 1; text-decoration: underline; text-underline-offset: 3px;}
+#real:checked ~ aside p {opacity: 1; text-decoration: underline; text-underline-offset: 3px;}
+#feel:checked ~ aside p {opacity: 1; text-decoration: underline; text-underline-offset: 3px;}
+*/
 
 input:nth-of-type(5) {display: none;}
 input:nth-of-type(6) {display: none;}
@@ -231,10 +232,6 @@ aside {
 #your1:checked ~ #ques-con>#yourself1 {display: block;}
 #your2:checked ~ #ques-con>#yourself2 {display: block;}
 
-#yourface3 {
-	display: block;
-}
-
 .talkbox {
 	width: 750px;
 	height: 1000px;
@@ -326,16 +323,7 @@ aside {
 #pick1:checked ~ #reason-con>#pick-1 {display: block;}
 #pick2:checked ~ #reason-con>#pick-2 {display: block;}
 
-#way1>h3, #way2>h3 {
-	font-family: "Nanum Pen Script", cursive;
-  	font-weight: 400;
-  	font-style: normal;
-  	font-size: 35px;
-  	text-align: center;
-  	margin-right: 150px;
-}
-
-#pick-1>h3, #pick-2>h3 {
+#way1>h3, #way2>h3, #pick-1>h3, #pick-2>h3 {
 	font-family: "Nanum Pen Script", cursive;
   	font-weight: 400;
   	font-style: normal;
@@ -360,6 +348,7 @@ aside {
 .blog>p:first-child {
 	font-family: '맑은 고딕', Gothic, sans-serif;
 }
+
 .descrip{
 	width: 300px;
 }
