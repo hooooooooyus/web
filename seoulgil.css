@@ -14,11 +14,10 @@ label {
 }
 
 #page {
-	padding-top: 10px;
 	width: 1500px;
-	height: 2000px;
+	height: 4500px;
 	margin: 10px auto;
-	background: #ededed url('header/bg_warp.gif') repeat-x 0 top;
+	background-color: #F2FFEE;
 }
 
 details {
@@ -53,34 +52,47 @@ summary::before, summary::after {
 summary::after {
     transform: rotateZ(90deg);
 }
-details p {
+details>p {
     padding-bottom: 30px;
+    /* opacity: 0.5; */
 }
 details[open] summary::after {
     display: none;
 }
+/*
+#self:checked ~ aside p {opacity: 1; text-decoration: underline; text-underline-offset: 3px;}
+#ques:checked ~ aside p {opacity: 1; text-decoration: underline; text-underline-offset: 3px;}
+#intro:checked ~ aside p {opacity: 1; text-decoration: underline; text-underline-offset: 3px;}
+#reason:checked ~ aside p {opacity: 1; text-decoration: underline; text-underline-offset: 3px;}
+#sup:checked ~ aside p {opacity: 1; text-decoration: underline; text-underline-offset: 3px;}
+#real:checked ~ aside p {opacity: 1; text-decoration: underline; text-underline-offset: 3px;}
+#feel:checked ~ aside p {opacity: 1; text-decoration: underline; text-underline-offset: 3px;}
+*/
 
 /* ------------------------------- header ----------------------------------*/
 
 #head {
 	width: 1500px;
 	height: 150px;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-  	/* background-image: linear-gradient(to right, yellowgreen, skyblue); */
+	position: fixed;
+	top: 0;
+  	background-color: #E0FFDA;
+  	z-index: 100;
 }
 
  #head>a {height: 0;}
 
 .seoulimg {
 	display: block;
+	float: left;
 	max-height: 100px;
 	margin-left: 50px;
 	margin-top: 25px;
+	z-index: 100;
 }
 
 .tab-title {
+	float: right;
 	display: block;
 	height: 150px;
 }
@@ -91,13 +103,12 @@ details[open] summary::after {
 	margin-right: 50px;
 	line-height: 150px;
 	text-align: center;
-	color: white;
 	font-weight: 600;
-	font-size: 24px;
+	font-size: 16px;
 	transition: font-size 0.5s ease-in-out;
 }
 .tab-title>label:hover {
-	font-size : 32px;
+	font-size : 24px;
 	text-decoration : underline;
  	text-underline-offset : 7px;
 }
@@ -111,7 +122,8 @@ input:nth-of-type(4) {display: none;}
 
 #main-content {
 	width: 1500px;
-	margin-top: 30px;
+	margin-top: 150px;
+	position: relative;
 }
 
 #main-content>#inner1, #main-content>#inner2,
@@ -125,7 +137,6 @@ input:nth-of-type(4) {display: none;}
 
 #inner1, #inner2, #inner3, #inner4 {
 	width: 1500px;
-	background-color: white;
 }
 
 input:nth-of-type(5) {display: none;}
@@ -170,19 +181,6 @@ aside {
 	margin-top: 20px;
 	width: 1250px;
 }
-
-/* --------------------------- inner1 -----------------------------*/
-
-#my-img {
-	display: flex;
-  	flex-direction: row;
-  	justify-content: space-around;
-	height: 450px;
-}
-.myface {
-	width: 300px;
-}	
-
 .article {
 	margin-left: 55px;
 	font-size: 30px;
@@ -196,6 +194,18 @@ aside {
 .article span {
 	color: red;
 	font-size: 40px;
+}
+
+/* --------------------------- inner1 -----------------------------*/
+
+#my-img {
+	display: flex;
+  	flex-direction: row;
+  	justify-content: space-around;
+	height: 450px;
+}
+.myface {
+	width: 300px;
 }
 
 #introself1, #introself2, #introself3 {display: none;}
@@ -241,10 +251,13 @@ aside {
 	padding: 20px;
 	height: 100px;
 }
+.talkbox:last-child {
+	margin-bottom: 10px;
+}
 .ask>.pull1 {
 	float: right;
 	position:relative; 
-	margin: 30px; 
+	margin: 20px; 
 	padding: 10px; 
 	width:200px; 
 	height:60px; 
@@ -265,7 +278,7 @@ aside {
 }
 .ans>.pull2 {
 	position:relative; 
-	margin: 30px; 
+	margin: 20px; 
 	padding: 10px; 
 	width:200px; 
 	height:90px; 
@@ -313,6 +326,15 @@ aside {
 #pick1:checked ~ #reason-con>#pick-1 {display: block;}
 #pick2:checked ~ #reason-con>#pick-2 {display: block;}
 
+#way1>h3, #way2>h3 {
+	font-family: "Nanum Pen Script", cursive;
+  	font-weight: 400;
+  	font-style: normal;
+  	font-size: 35px;
+  	text-align: center;
+  	margin-right: 150px;
+}
+
 #pick-1>h3, #pick-2>h3 {
 	font-family: "Nanum Pen Script", cursive;
   	font-weight: 400;
@@ -320,4 +342,62 @@ aside {
   	font-size: 35px;
   	text-align: center;
   	margin-right: 150px;
+}
+
+/* --------------------------- inner4 -----------------------------*/
+
+.blog {
+	padding-top: 50px;
+	text-align: center;
+}
+.blog>p {
+	display: inline-block;
+	font-family: "Nanum Pen Script", cursive;
+  	font-weight: 400;
+  	font-style: normal;
+  	font-size: 30px;
+}
+.blog>p:first-child {
+	font-family: '맑은 고딕', Gothic, sans-serif;
+}
+.descrip{
+	width: 300px;
+}
+
+#real-con {
+	margin-top: 0;
+}
+#real-con>strong {
+	font-size: 24px;
+}
+.trip {
+	width: 300px;
+}
+#wide-img {
+	width: 600px;
+}
+
+#feel-con>p {
+	display: inline;
+	font-family: "Nanum Pen Script", cursive;
+  	font-weight: 400;
+  	font-style: normal;
+  	font-size: 30px;
+}
+#feel-con>p:first-child {
+	font-family: '맑은 고딕', Gothic, sans-serif;
+}
+
+#friend-img {
+	width: 1000px;
+	margin: auto;
+	display: flex;
+  	flex-direction: row;
+  	justify-content: space-around;
+}
+.friend {
+	width: 400px;
+}
+.view {
+	width: 800px;
 }
